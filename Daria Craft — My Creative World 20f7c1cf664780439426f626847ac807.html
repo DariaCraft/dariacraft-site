@@ -1,0 +1,688 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Daria Craft — My Creative World</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-default { background-color: rgba(84, 72, 49, 0.08); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="20f7c1cf-6647-8043-9426-f626847ac807" class="page sans"><header><img class="page-cover-image" src="Daria%20Craft%20%E2%80%94%20My%20Creative%20World%2020f7c1cf664780439426f626847ac807/Banner_DC_Notion.png" style="object-position:center 27.559999999999995%"/><h1 class="page-title">Daria Craft — My Creative World</h1><p class="page-description"></p></header><div class="page-body"><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="22e7c1cf-6647-80d7-9271-fae605507522"><div style="width:100%"><p id="22e7c1cf-6647-8090-876a-c11aab1ec57e" class="">👋 <mark class="highlight-purple">Welcome to Daria Craft — My Creative World</mark></p><p id="22e7c1cf-6647-8056-805f-ccbfd11badf0" class=""><mark class="highlight-purple">Books, posters, and printables made with curiosity, color, and care.<br/>Explore the ocean, dream in color, and discover something new.<br/></mark></p></div></figure><p id="22e7c1cf-6647-802b-b538-d2edfb893b11" class="">
+</p><h1 id="22e7c1cf-6647-80a8-8987-d76cfb2027ea" class="">📚 Books on Amazon</h1><h2 id="22e7c1cf-6647-8014-a9dc-c07e3c0580a2" class="block-color-yellow_background">🎨 <mark class="highlight-blue">Coloring Books</mark>  </h2><div id="22e7c1cf-6647-8061-8510-eed6a4350058" class="column-list"><div id="22e7c1cf-6647-8000-bf79-f7e50c3e7eb7" style="width:100%" class="column"><figure id="22e7c1cf-6647-8083-a6fb-ca02d0ed255c" class="image"><a href="Daria%20Craft%20%E2%80%94%20My%20Creative%20World%2020f7c1cf664780439426f626847ac807/2.png"><img style="width:332px" src="Daria%20Craft%20%E2%80%94%20My%20Creative%20World%2020f7c1cf664780439426f626847ac807/2.png"/></a></figure><p id="22e7c1cf-6647-80c3-a26c-d636e28a8630" class="">📘 <em><mark class="highlight-brown"><strong>Fishy Fantasies &amp; Ocean Magic</strong></mark></em></p><p id="22e7c1cf-6647-8047-8224-d5341b9f197e" class=""><mark class="highlight-blue">Cute ocean animals to color and enjoy!</mark></p><p id="22e7c1cf-6647-8088-b035-fbf088ec0bcb" class=""><mark class="highlight-blue">Perfect for young explorers aged 3–7.</mark></p><p id="22e7c1cf-6647-80ad-a6b8-c5959539c52a" class="block-color-brown"><a href="https://a.co/d/deLsj92">🔗 </a><strong><a href="https://a.co/d/deLsj92">View on Amazon</a></strong></p><h2 id="22e7c1cf-6647-8046-b2dc-e133131af093" class="block-color-yellow_background">🔬 <mark class="highlight-blue">Educational Books</mark></h2></div><div id="22e7c1cf-6647-80d8-894e-ede47ac54af8" style="width:100%" class="column"><figure id="22e7c1cf-6647-80de-9b5d-fa4293afb2af" class="image"><a href="Daria%20Craft%20%E2%80%94%20My%20Creative%20World%2020f7c1cf664780439426f626847ac807/5.png"><img style="width:332px" src="Daria%20Craft%20%E2%80%94%20My%20Creative%20World%2020f7c1cf664780439426f626847ac807/5.png"/></a></figure><p id="22e7c1cf-6647-8062-ab4e-c9e67fa2e601" class="">📘 <em><mark class="highlight-brown"><strong>Happy Dolphin Dino</strong></mark></em></p><p id="22e7c1cf-6647-801a-81f0-cb6d9084878e" class=""><mark class="highlight-blue">A fun coloring &amp; activity book for ages 4–8.</mark></p><p id="22e7c1cf-6647-80df-bc5c-e774eeedc8d2" class=""><mark class="highlight-blue">🧩 Mazes, puzzles &amp; 30 coloring pages!</mark></p><p id="22e7c1cf-6647-80f2-b62b-c3e07a8ca6c6" class="block-color-brown"><a href="https://a.co/d/8rV5ccu">🔗</a><strong><a href="https://a.co/d/8rV5ccu"> View on Amazon</a></strong></p><p id="22e7c1cf-6647-8063-8a79-ca3873f3aa9d" class="">
+</p></div></div><div id="22e7c1cf-6647-802f-8403-d4300a072121" class="column-list"><div id="22e7c1cf-6647-8084-9434-e8a1e28bfda8" style="width:50%" class="column"><figure id="22e7c1cf-6647-80e0-b1d6-e27a8a73b02c" class="image"><a href="Daria%20Craft%20%E2%80%94%20My%20Creative%20World%2020f7c1cf664780439426f626847ac807/3.png"><img style="width:332px" src="Daria%20Craft%20%E2%80%94%20My%20Creative%20World%2020f7c1cf664780439426f626847ac807/3.png"/></a></figure><p id="22e7c1cf-6647-80e9-ad51-c16c5a55ac0c" class="">📘 <em><mark class="highlight-brown"><strong>Undersea Wonders – Book 1</strong></mark></em></p><p id="22e7c1cf-6647-8045-8ab8-e0f03bc358eb" class=""><mark class="highlight-blue">Fun facts &amp; questions about jellyfish, whales, and more!</mark></p><p id="22e7c1cf-6647-8048-8479-ebe25dfb7383" class=""><mark class="highlight-blue">Interactive marine biology for kids 4–9.</mark></p><p id="22e7c1cf-6647-80ad-b57f-dc53372b276d" class="block-color-brown"><a href="https://a.co/d/ig9lJvD">🔗 </a><strong><a href="https://a.co/d/ig9lJvD">View on Amazon</a></strong></p><p id="22e7c1cf-6647-80de-b628-c7da4d4d5af5" class="">
+</p></div><div id="22e7c1cf-6647-80ee-a909-f710262a32e2" style="width:50%" class="column"><figure id="22e7c1cf-6647-8030-ab90-fc492cc20b0b" class="image"><a href="Daria%20Craft%20%E2%80%94%20My%20Creative%20World%2020f7c1cf664780439426f626847ac807/4.png"><img style="width:332px" src="Daria%20Craft%20%E2%80%94%20My%20Creative%20World%2020f7c1cf664780439426f626847ac807/4.png"/></a></figure><p id="22e7c1cf-6647-8055-a17c-dfa5b3e49ca9" class=""><mark class="highlight-brown">📘 </mark><mark class="highlight-brown"><strong>Dino’s Coral Reef Adventure</strong></mark></p><p id="22e7c1cf-6647-8069-8042-c045644b60ee" class=""><em><mark class="highlight-blue">Undersea Wonders – Book 2</mark></em></p><p id="22e7c1cf-6647-8005-bcdc-f8022ffbccb5" class=""><mark class="highlight-blue">Join Dino the Dolphin on a new underwater journey!</mark></p><p id="22e7c1cf-6647-806c-aa46-d9af9506ff86" class=""><mark class="highlight-blue">This book is packed with fun facts, bright illustrations, and smart questions about coral reef life.</mark></p><p id="22e7c1cf-6647-8042-b5f5-df69c95f243e" class=""><mark class="highlight-blue">Perfect for curious kids aged 4–9.</mark></p><p id="22e7c1cf-6647-80f3-b767-decbb1ae2b55" class="block-color-brown"><a href="https://a.co/d/ig9lJvD">🔗 </a><strong><a href="https://a.co/d/ig9lJvD">View on Amazon</a></strong></p></div></div><h2 id="20f7c1cf-6647-8095-ba07-f5c3efa0fa44" class="block-color-yellow_background">🛍️ <mark class="highlight-blue">Etsy Printables</mark></h2><div id="22e7c1cf-6647-80c8-95d3-f33150a14494" class="column-list"><div id="22e7c1cf-6647-80c3-82fb-d0fa564a5f46" style="width:33.33333333333333%" class="column"><figure id="22e7c1cf-6647-808e-9323-cae2388f5006" class="image"><a href="Daria%20Craft%20%E2%80%94%20My%20Creative%20World%2020f7c1cf664780439426f626847ac807/6.png"><img style="width:205.96875px" src="Daria%20Craft%20%E2%80%94%20My%20Creative%20World%2020f7c1cf664780439426f626847ac807/6.png"/></a></figure><p id="22e7c1cf-6647-8020-8882-f03c4485a4d4" class=""><em><mark class="highlight-brown"><strong>Toto’s Adventures — A Fun Coloring Set</strong></mark></em></p><p id="22e7c1cf-6647-800c-8692-e144c9bf0fcf" class=""><mark class="highlight-blue">3 playful coloring pages featuring masked fish friends.</mark></p><p id="22e7c1cf-6647-809e-8aaf-d083506ea21a" class=""><mark class="highlight-blue">Printable, fun &amp; perfect for ocean-loving kids!</mark></p></div><div id="22e7c1cf-6647-8082-a7a6-f915437b7885" style="width:33.33333333333333%" class="column"><figure id="22e7c1cf-6647-809a-a14b-fbc34abc9a86" class="image"><a href="Daria%20Craft%20%E2%80%94%20My%20Creative%20World%2020f7c1cf664780439426f626847ac807/7.png"><img style="width:205.96875px" src="Daria%20Craft%20%E2%80%94%20My%20Creative%20World%2020f7c1cf664780439426f626847ac807/7.png"/></a></figure><p id="22e7c1cf-6647-8080-9130-eb84469b68fa" class=""><em><mark class="highlight-brown"><strong>Stars &amp; Stripes Ocean Friends</strong></mark></em></p><p id="22e7c1cf-6647-80b3-8b57-f74e50910ea2" class=""><mark class="highlight-blue">4 printable patriotic fish posters — perfect for summer fun or classroom decor!</mark></p><p id="22e7c1cf-6647-8074-b26d-c9b76d082c57" class=""><mark class="highlight-blue">Celebrate with stars, stripes, and ocean friends.</mark></p></div><div id="22e7c1cf-6647-8053-ace5-f0297a9fe3fb" style="width:33.33333333333333%" class="column"><figure id="22e7c1cf-6647-8091-ad45-eb7af3bd0c97" class="image"><a href="Daria%20Craft%20%E2%80%94%20My%20Creative%20World%2020f7c1cf664780439426f626847ac807/Etsy9.png"><img style="width:205.96875px" src="Daria%20Craft%20%E2%80%94%20My%20Creative%20World%2020f7c1cf664780439426f626847ac807/Etsy9.png"/></a></figure><p id="22e7c1cf-6647-8028-ba48-f23301a3b569" class=""><em><mark class="highlight-brown"><strong>Learn Colors with Ocean Animals</strong></mark></em></p><p id="22e7c1cf-6647-8090-99ec-d031b9809377" class=""><mark class="highlight-blue">5 printable posters to help kids learn colors with fun and friendly sea creatures.</mark></p><p id="22e7c1cf-6647-8078-85ca-e420b65e4fdb" class=""><mark class="highlight-blue">Bright, educational, and perfect for any playroom or classroom wall!</mark></p></div></div><p id="20f7c1cf-6647-80de-92a1-de71f95c1f12" class="block-color-brown">🔗 <strong>Visit my Etsy </strong><strong><a href="https://dcslv.etsy.com/">https://dcsLV.etsy.com</a></strong></p><h2 id="20f7c1cf-6647-8048-a179-ce71672bcb44" class="block-color-yellow_background">🎨 <mark class="highlight-blue">Redbubble Prints</mark></h2><div id="22e7c1cf-6647-80b4-8e72-f8ea978c5410" class="column-list"><div id="22e7c1cf-6647-8064-ad8d-f712ed17a577" style="width:25%" class="column"><figure id="22e7c1cf-6647-8064-b7ab-fd103245ce08" class="image"><a href="Daria%20Craft%20%E2%80%94%20My%20Creative%20World%2020f7c1cf664780439426f626847ac807/9.png"><img style="width:143px" src="Daria%20Craft%20%E2%80%94%20My%20Creative%20World%2020f7c1cf664780439426f626847ac807/9.png"/></a></figure><p id="22e7c1cf-6647-8085-87fd-e79e5a896914" class="block-color-blue"><mark class="highlight-brown"><mark class="highlight-default_background"><strong>Koi Quartet: Shields of Vibrance</strong></mark></mark></p><p id="22e7c1cf-6647-8018-a66c-ec3be2d0083b" class=""><mark class="highlight-blue"><mark class="highlight-default_background">A surreal design featuring four symbolic koi fish in harmony.</mark></mark></p><p id="22e7c1cf-6647-8061-8ed2-fa82491cf79c" class="">
+</p><p id="22e7c1cf-6647-801c-a2ec-c0d249229723" class=""><mark class="highlight-blue"><mark class="highlight-default_background">Available on T-shirts, pillows &amp; more.</mark></mark></p></div><div id="22e7c1cf-6647-80fa-a868-e39a6dcde9de" style="width:25%" class="column"><figure id="22e7c1cf-6647-80c8-b330-f62a807ccf98" class="image"><a href="Daria%20Craft%20%E2%80%94%20My%20Creative%20World%2020f7c1cf664780439426f626847ac807/10.png"><img style="width:143px" src="Daria%20Craft%20%E2%80%94%20My%20Creative%20World%2020f7c1cf664780439426f626847ac807/10.png"/></a></figure><p id="22e7c1cf-6647-80e7-ac4c-fdb69c84833b" class=""><mark class="highlight-brown"><strong>Harmony of Nature</strong></mark></p><p id="22e7c1cf-6647-80ea-8540-feba204aeca9" class=""><mark class="highlight-blue">A mystical blend of plants, fish, and flow — for dreamers and nature lovers.</mark></p><p id="22e7c1cf-6647-80bd-8179-f51c132a2978" class=""><mark class="highlight-blue">Printed on apparel, home decor &amp; accessories.</mark></p><p id="22e7c1cf-6647-80b5-a881-c1e9d4397d10" class="">
+</p></div><div id="22e7c1cf-6647-8066-bcd7-f38229be05aa" style="width:25%" class="column"><figure id="22e7c1cf-6647-80f1-b3b4-d4fa092452db" class="image"><a href="Daria%20Craft%20%E2%80%94%20My%20Creative%20World%2020f7c1cf664780439426f626847ac807/11.png"><img style="width:143px" src="Daria%20Craft%20%E2%80%94%20My%20Creative%20World%2020f7c1cf664780439426f626847ac807/11.png"/></a></figure><p id="22e7c1cf-6647-8091-8dda-dddfe6016fb2" class=""><mark class="highlight-brown"><strong>Ocean Rainbow Friends — Psychedelic Fish Illustration</strong></mark></p><p id="22e7c1cf-6647-80c1-ba19-c48f3ab3f172" class=""><mark class="highlight-blue">Bright, trippy sea creatures in a vibrant marine spectrum.</mark></p><p id="22e7c1cf-6647-8082-babd-c99cd82b36d8" class=""><mark class="highlight-blue">Perfect for bold prints and statement items.</mark></p></div><div id="22e7c1cf-6647-80bf-ba0b-e794a1ebc040" style="width:25%" class="column"><figure id="22e7c1cf-6647-8062-b05b-ecd436c45456" class="image"><a href="Daria%20Craft%20%E2%80%94%20My%20Creative%20World%2020f7c1cf664780439426f626847ac807/12.png"><img style="width:143px" src="Daria%20Craft%20%E2%80%94%20My%20Creative%20World%2020f7c1cf664780439426f626847ac807/12.png"/></a></figure><p id="22e7c1cf-6647-801e-956b-f6a9aaf6a7f6" class=""><mark class="highlight-brown"><strong>Whimsical Underwater Shield</strong></mark></p><p id="22e7c1cf-6647-80fb-a0af-c3c32ce38fa8" class=""><mark class="highlight-blue">A dreamy, symbolic sea-themed shield — rich with detail and flow.</mark></p><p id="22e7c1cf-6647-8062-9112-eaac31c57daf" class=""><mark class="highlight-blue">Great for unique shirts, wall art, and stickers.</mark></p></div></div><p id="20f7c1cf-6647-8060-99ea-f4d3f4fce349" class="block-color-brown"><strong>🔗 Visit Redbubble </strong><strong><a href="https://redbubble.com/people/dariacraft">https://redbubble.com/people/dariacraft</a></strong></p><h2 id="20f7c1cf-6647-8076-8e5e-e01bb4c4b178" class="block-color-default_background"> <mark class="highlight-blue">🛍 </mark><mark class="highlight-blue"><strong>Find Me on All Platforms</strong></mark></h2><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="22e7c1cf-6647-800c-9907-d74a149365a8"><div style="width:100%"><p id="22e7c1cf-6647-8085-b7ce-f0d8f54b0a51" class="">🧵 <a href="https://dcslv.etsy.com/">Etsy</a> — Printable sets &amp; coloring pages <a href="https://dcslv.etsy.com/">https://dcsLV.etsy.com</a></p><p id="22e7c1cf-6647-80e2-b02a-ccf53d1f2f91" class="">📘 <a href="https://www.amazon.com/author/dariacraft">Amazon</a> — Books &amp; eBooks <a href="https://www.amazon.com/stores/author/B0FB96JTLY">https://www.amazon.com/stores/author/B0FB96JTLY</a></p><p id="22e7c1cf-6647-8046-babe-e05bdde4b81f" class="">📎 Gumroad <a href="https://dariacraftdesign.gumroad.com/">https://dariacraftdesign.gumroad.com</a>— Instant digital downloads</p><p id="22e7c1cf-6647-8083-99ed-d30d2bb06977" class="">🌈 Redbubble🔗 <strong><a href="https://www.redbubble.com/people/DariaCraft">https://www.redbubble.com/people/DariaCraft</a></strong>— Wall art, apparel &amp; more</p><p id="22e7c1cf-6647-80b3-9437-c5ad61e44128" class="">🖼 TeePublic <a href="http://tee.pub/lic/QDa_Q9H_leo">http://tee.pub/lic/QDa_Q9H_leo</a> — T-shirts, mugs &amp; accessories</p></div></figure><p id="22e7c1cf-6647-80c4-b78e-fe5046432924" class="">
+</p><h2 id="22e7c1cf-6647-8043-9337-e50a9c857221" class="">🌐 Stay Connected</h2><p id="20f7c1cf-6647-80df-bf6a-c23cbcb1eae5" class="">
+</p><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="22e7c1cf-6647-806d-ba37-eda06e9b8b74"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><p id="22e7c1cf-6647-809c-8342-f1992ef04bcb" class="">🔗 Follow on Pinteres <a href="https://pinterest.com/dariaCraft">https://pinterest.com/dariaCraft</a></p><p id="22e7c1cf-6647-8047-a017-c2106a37e942" class="">🎥 TikTok <a href="https://www.tiktok.com/@daria.craft3">https://www.tiktok.com/@daria.craft3</a></p><p id="22e7c1cf-6647-809e-8ed4-e1dfb4d24f92" class="">🐦 Twitter / X <a href="https://x.com/dariacraftnft">https://x.com/dariacraftnft</a></p><p id="22e7c1cf-6647-80d1-9381-ffd4aa7c3dc2" class="">🧵 <a href="https://www.threads.com/@dariacraft_art">Threads</a> <a href="https://www.threads.com/@dariacraft_art">https://www.threads.com/@dariacraft_art</a></p><p id="22e7c1cf-6647-80ab-89bd-e4a49a5be550" class="">📸 <a href="https://www.instagram.com/dariacraft_art">Instagram</a> <a href="https://www.instagram.com/dariacraft_art">https://www.instagram.com/dariacraft_art</a></p></div></figure><p id="20f7c1cf-6647-8007-95db-c2c6bad384e8" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
